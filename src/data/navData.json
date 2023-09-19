@@ -1,0 +1,97 @@
+{
+  "nav": [
+    {
+      "nav_name": "Domů",
+      "link": "/",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "O nás",
+      "link": "/about",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "Portfolio",
+          "link": "/portfolio"
+        },
+        {
+          "name": "Náš tým",
+          "link": "/team"
+        },
+        {
+          "name": "Kariéra",
+          "link": "/career"
+        }
+       
+      ]
+
+
+
+
+  
+      
+    },
+    {
+      "nav_name": "Naše služby",
+      "link": "/service",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "Webové stránky a aplikace",
+          "link": "/service/web",
+          "sub_dropdown_nav": [
+            {
+              "name": "Next.js",
+              "link": "/service-details"
+            },
+            {
+              "name": "React",
+              "link": "/service-detailst"
+            },
+            {
+              "name": "Wordpress",
+              "link": "/service-details"
+            }
+          ]
+        },
+        {
+          "name": "Vývoj desktop aplikací",
+          "link": "/service/desktop"
+         
+        },
+       
+        {
+          "name": "Tvorba eshopů",
+          "link": "/service/eshop"
+         
+        },
+      
+        {
+          "name": "Zakázkový vývoj dalších řešení",
+          "link": "/service/custom"
+        }
+      ]
+    },
+   
+    
+    {
+      "nav_name": "Blog",
+      "link": "/blog",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "FAQ",
+      "link": "/faq",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "Kontakt",
+      "link": "/contact",
+      "type": "",
+      "sub_nav": []
+    }
+  ]
+}
