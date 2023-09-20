@@ -15,7 +15,7 @@ const Portfolio = ({fetched2}) => {
       <main>
         <RootLayout header="header3" footer="footer3">
           <Portfolio1 data={fetched2.data}/>
-          <DigitalAgencyCTA />
+          <DigitalAgencyCTA title={"Kontakt"} description={"Zaujali vás naše služby a chete se dozvědět více?"} button={"Kontaktujte nás"}  />
         </RootLayout>
       </main>
     </>
