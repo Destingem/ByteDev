@@ -9,7 +9,7 @@ import AboutTestimonial from "@/components/testimonial/AboutTestimonial";
 import Head from "next/head";
 
 const About = ({team2, recenze2}) => {
-  console.log(team2.data)
+
   return (
     <div>
       <Head>

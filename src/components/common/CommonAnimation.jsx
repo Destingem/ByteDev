@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import $ from "jquery";
 import { Power2, gsap } from "gsap";
@@ -103,20 +104,25 @@ const CommonAnimation = ({ children }) => {
               },
             });
 
-            const itemSplitted = new SplitText(splitTextLine, {
-              type: "words, lines",
-            });
-            gsap.set(splitTextLine, { perspective: 400 });
-            itemSplitted.split({ type: "lines" });
-            tl.from(itemSplitted.lines, {
-              duration: 1,
-              delay: 0.3,
-              opacity: 0,
-              rotationX: -80,
-              force3D: true,
-              transformOrigin: "top center -50",
-              stagger: 0.1,
-            });
+            try {
+              const itemSplitted = new SplitText(splitTextLine, {
+                type: "words, lines",
+              });
+              gsap.set(splitTextLine, { perspective: 400 });
+              itemSplitted.split({ type: "lines" });
+              tl.from(itemSplitted.lines, {
+                duration: 1,
+                delay: 0.3,
+                opacity: 0,
+                rotationX: -80,
+                force3D: true,
+                transformOrigin: "top center -50",
+                stagger: 0.1,
+              });
+            } catch (error) {
+              console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+              // You can add any additional fallback code here if necessary.
+            }
           });
           let splitTextLines = gsap.utils.toArray(".text-anim p");
 

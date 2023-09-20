@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Career6 from "../../public/assets/imgs/career/6.jpg";
+import Career6 from "../../../public/assets/imgs/career/6.jpg";
 import Image from "next/image";
 import RootLayout from "@/components/common/layout/RootLayout";
 import JobDetails1 from "@/components/job/JobDetails1";

@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger, SplitText, chroma } from "@/plugins";
@@ -56,7 +57,13 @@ export default function Footer1() {
             once: true,
           },
         });
+      try{
         let mySplitText = new SplitText(".end", { type: "words,chars" });
+      } catch(error) {
+        console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+        var mySplitText = ""
+
+      }
         let chars = mySplitText.chars;
         let endGradient = chroma.scale([
           "#F9D371",

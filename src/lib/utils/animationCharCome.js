@@ -6,7 +6,12 @@ const animationCharCome = (charAnim, staggerTime = 0.05) => {
     let tHero = gsap.context(() => {
       let char_come = charAnim;
 
-      let split_char = new SplitText(char_come, { type: "chars, words" });
+     try{
+      var split_char = new SplitText(char_come, { type: "chars, words" });
+     } catch(error){
+      console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+      var split_char = ""
+     }
       gsap.from(split_char.chars, {
         duration: 1,
         x: 70,

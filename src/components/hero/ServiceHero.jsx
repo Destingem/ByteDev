@@ -65,7 +65,7 @@ const ServiceHero = () => {
         });
       }
     } catch (err) {
-      console.log(err);
+      
     }
   }
 

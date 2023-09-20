@@ -9,23 +9,25 @@ const TeamDetails1 = ({ jmeno,
   pozice,
   desc,
   portfolio,
-  technology: { skills },
+  technology,
   email,
   phone,
   createdAt,
   updatedAt,
   publishedAt,
-  preview432x550: { data: previewData },
-  photo765x1000: { data: photoData },
-  projects: { data: projectData }}) => {
+  preview432x550,
+  photo765x1000,
+  projects}) => {
   const charAnim = useRef();
   const charAnim2 = useRef();
   useEffect(() => {
     animationCharCome(charAnim.current);
     animationCharCome(charAnim2.current);
   }, []);
- 
-  let portfolioLinks = Object.entries(portfolio).map(([name, href]) => ({ name, href }));
+ let previewData = preview432x550?.data
+ let photoData = photo765x1000?.data
+  let projectData = projects?.data
+  let portfolioLinks = portfolio ? Object.entries(portfolio)?.map(([name, href]) => ({ name, href })) : []
   return (
     <>
       <section className="team__detail">
@@ -53,9 +55,9 @@ const TeamDetails1 = ({ jmeno,
                   style={{padding: "0"}}
                 >
                   {jmeno} <br />
-                  {jmeno.length > 3 && prijmeni}
+                  {jmeno?.length > 3 && prijmeni}
                 </h2>
-                {jmeno.length < 3 && <h3 style={{color: "#545454 !important"}}>{prijmeni}</h3>}
+                {jmeno?.length < 3 && <h3 style={{color: "#545454 !important"}}>{prijmeni}</h3>}
                 <h3
                 style={{marginTop: "2vh"}}
                   className="team__member-role-7 animation__char_come"
@@ -71,7 +73,7 @@ const TeamDetails1 = ({ jmeno,
               <div className="team__member-work">
               <h4 className="work-title">Dovednosti</h4>
               <ul>
-              {skills.map(skill => {
+              {technology?.skills?.map(skill => {
                 return(
                   <li>
                    <a href="#"> {skill}</a>
@@ -94,7 +96,7 @@ const TeamDetails1 = ({ jmeno,
               <div className="team__member-work">
                 <h4 className="work-title">Portfolio :</h4>
                 <ul>
-                {portfolioLinks.map(({name, href}, index) => {
+                {portfolioLinks?.map(({name, href}, index) => {
 
                   return(
                     <li>
@@ -107,7 +109,7 @@ const TeamDetails1 = ({ jmeno,
               <div className="team__member-work">
                 <h4 className="work-title">Projekty</h4>
                 <ul>
-                {projectData.map(({attributes: {name}}, index) => {
+                {projectData?.map(({attributes: {name}}, index) => {
                   return(
                     <li>
                     <a href={"/portfolio/"+name.toLowerCase().replace(" ", "-")}>{name}</a>

@@ -35,7 +35,7 @@ const JobDetails1 = ({data}) => {
   const jobApply = () => {
     setModal1(true);
   };
-  const { metadata, htmlContent } = parseMarkdown(data.text);
+  const { metadata, htmlContent } = data?.text ? parseMarkdown(data.text) : {htmlContent: ""};
   return (
     <>
       <section className="job__detail">
@@ -45,16 +45,16 @@ const JobDetails1 = ({data}) => {
           <div className="row">
             <div className="col-xxl-9 col-xl-9 col-lg-8 col-md-8">
               <div className="job__detail-wrapper">
-                <h2 className="sec-title">{data.name}</h2>
+                <h2 className="sec-title">{data?.name}</h2>
                 <ul className="job__detail-meta">
                   <li>
-                    <span>Lokace</span> {data.misto}
+                    <span>Lokace</span> {data?.misto}
                   </li>
                   <li>
-                    <span>Datum</span> {data.datum}
+                    <span>Datum</span> {data?.datum}
                   </li>
                   <li>
-                    <span>Typ práce</span> {data.typ_prace}
+                    <span>Typ práce</span> {data?.typ_prace}
                   </li>
                 </ul>
                 <div className="job__detail-content">
@@ -78,24 +78,24 @@ const JobDetails1 = ({data}) => {
               <div className="job__detail-sidebar">
                 <ul>
                   <li>
-                    <span>Požadované zkušenosti</span> {data.experience}
+                    <span>Požadované zkušenosti</span> {data?.experience}
                   </li>
                   <li>
-                    <span>Pracovní doba</span> {data.hours}
+                    <span>Pracovní doba</span> {data?.hours}
                   </li>
                   <li>
-                    <span>Pracovní dny</span> {data.work_days}
+                    <span>Pracovní dny</span> {data?.work_days}
                   </li>
                   <li>
-                    <span>Mzda</span> {data.salary}
+                    <span>Mzda</span> {data?.salary}
                   </li>
                   <li>
-                    <span>Místa</span> {data.pocet + " volná místa"}
+                    <span>Místa</span> {data?.pocet + " volná místa"}
                   </li>
                   <li>
-                    <span>Uzávěrka</span> {data.deadline}
+                    <span>Uzávěrka</span> {data?.deadline}
                   </li>
-                  {data.dalsi_atributy && Object.entries(data.dalsi_atributy).map(([key, value]) => (
+                  {data?.dalsi_atributy && Object.entries(data.dalsi_atributy).map(([key, value]) => (
           <li key={key}>
             <span>{key}</span> {value}
           </li>

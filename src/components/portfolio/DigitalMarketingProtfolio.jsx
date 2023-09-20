@@ -29,7 +29,7 @@ const transformPortfolioData = (dataArray) => {
       link: "/portfolio/" + data.attributes.name.toLowerCase().replace(" ", "-") || "/service-details",
       name: (
           <>
-              <h3 style={{ fontSize: "2rem" }}>{data.attributes.name}</h3>
+              <h3 className="portfolio__title-3" style={{ fontSize: "2rem" }}>{data.attributes.name}</h3>
               <span>{data.attributes.type} {data.attributes.year}</span>
           </>
       ),
@@ -37,7 +37,7 @@ const transformPortfolioData = (dataArray) => {
   }));
 };
 const DigitalMarketingProtfolio = ({portfolio}) => {
-    console.log(portfolio);
+   
     const ourSites = transformPortfolioData(portfolio);
   return (
     <>
@@ -78,9 +78,9 @@ const DigitalMarketingProtfolio = ({portfolio}) => {
                   <SwiperSlide>
                     <div className="portfolio__slide-3">
                       <Link href={site?.link}>
-                        <h3 className="portfolio__title-3">
+                        
                          {site?.name}
-                        </h3>
+                       
                         <Image
                        height={600}
                           priority

@@ -4,7 +4,7 @@ import Portfolio1 from "@/components/portfolio/Portfolio1";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 
 const Portfolio = ({fetched2}) => {
-  console.log(fetched2);
+  
   return (
     <>
       <Head>

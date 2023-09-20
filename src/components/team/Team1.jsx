@@ -21,7 +21,7 @@ import animationCharCome from "@/lib/utils/animationCharCome";
 import Placeholder from "../../../public/assets/imgs/team/placeholder.jpg";
 
 const Team1 = ({people: data}) => {
-  console.log(data);
+  
   const charAnim = useRef();
   useEffect(() => {
     animationCharCome(charAnim.current);
@@ -115,7 +115,7 @@ const Team1 = ({people: data}) => {
             }}
           >
          {data.map((member, index) => {
-            console.log(member.attributes)
+         
     let {jmeno, prijmeni, pozice} = member.attributes
     var slug = "";
     if (jmeno.length <= 3) {
@@ -123,7 +123,7 @@ const Team1 = ({people: data}) => {
     } else {
       slug = `${jmeno.toLowerCase()}-${prijmeni.toLowerCase()}`;
     }
-    console.log(member?.attributes?.preview432x550?.data?.attributes?.url)
+   
     return(
   <SwiperSlide key={index}>
     <div className="team__slide">

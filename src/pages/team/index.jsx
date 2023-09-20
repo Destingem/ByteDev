@@ -5,7 +5,7 @@ import TeamCounter from "@/components/counter/TeamCounter";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 
 const Team = (props) => {
-  console.log(props.fetched2.data)
+
   let {data} = props?.fetched2
   return (
     <div>
@@ -29,13 +29,13 @@ export default Team;
 
 export async function getStaticProps() {
 
-  let fetched = await fetch("http://38.242.151.80:1666/api/team-members?populate=*?", {
+  let fetched = await fetch("http://38.242.151.80:1666/api/team-members?populate=deep", {
       headers: {
           Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
       }
       })
       let fetched2 = await fetched.json()
-      fetched2.data.sort((a, b) => new Date(b. attributes.createdAt) - new Date(a.attributes.createdAt))
+      
 
   
       return ({

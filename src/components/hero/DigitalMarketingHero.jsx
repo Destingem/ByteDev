@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "@/plugins";
@@ -18,13 +19,22 @@ const DigitalMarketingHero = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let split_creatives = new SplitText(titleLeft.current, { type: "chars" });
-      let split_solutions = new SplitText(titleRight.current, {
+    try{
+      var split_creatives = new SplitText(titleLeft.current, { type: "chars" });
+      var split_solutions = new SplitText(titleRight.current, {
         type: "chars",
       });
-      let split_text_animation = new SplitText(heroTextAnim.current, {
+      var split_text_animation = new SplitText(heroTextAnim.current, {
         type: "chars words",
       });
+    }  catch (error) {
+      console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+      var split_creatives = ""
+      var split_solutions = ""
+      var split_text_animation = ""
+      // You can add any additional fallback code here if necessary.
+    }
+    
       let tHero = gsap.context(() => {
         let HomeDigital = gsap.timeline();
 
@@ -119,13 +129,13 @@ const DigitalMarketingHero = () => {
               />
               <div className="intro-title">
                 <h4 className="video-title" ref={videoTitle}>
-                  Watch <span>video intro</span>
+                 Podívat se <span>na video</span>
                 </h4>
                 <h4
                   className="video-title close-video-title"
                   ref={videoCloseSection}
                 >
-                  Close <span>video intro</span>
+                 Zavřít <span>Video</span>
                 </h4>
               </div>
               <div className="video">

@@ -87,7 +87,7 @@ const Blog1 = ({ blogPosts }) => {
           </div>
           <div className="row reset-grid">
         {blogPosts.map((posto, index) => {
-          console.log(posto)
+        
           const post = posto?.attributes
           return(
           <div key={index} className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">

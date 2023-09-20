@@ -12,29 +12,31 @@ import { useEffect, useRef } from "react";
 import animationCharCome from "@/lib/utils/animationCharCome";
 
 const PortfolioDetails1 = (a) => {
-  const {
-    name,
-    type,
-    year,
-    client,
-    start_date,
-    end_date,
-    link,
-    createdAt,
-    updatedAt,
-    publishedAt,
-    main1820x900,
-    preview770x938,
-    Porfolio,
-    gallery,
-    prilohy,
-    team_members} = a.data;
+ 
+if(!a?.data) return null
+const {
+  name,
+  type,
+  year,
+  client,
+  start_date,
+  end_date,
+  link,
+  createdAt,
+  updatedAt,
+  publishedAt,
+  main1820x900,
+  preview770x938,
+  Porfolio,
+  gallery,
+  prilohy,
+  team_members} = a?.data;
    
     let nextItem = a.allData.data.find(item => item.id === a.id + 1)
     let prevItem = a.allData.data.find(item => item.id === a.id - 1)
     
-    let nextHref = nextItem ? nextItem.attributes.name.toLowerCase().replace(" ", "-") : "/portfolio"
-    let prevHref = prevItem ? prevItem.attributes.name.toLowerCase().replace(" ", "-") : "/portfolio"
+    let nextHref = nextItem ? nextItem.attributes?.name.toLowerCase().replace(" ", "-") : "/portfolio"
+    let prevHref = prevItem ? prevItem.attributes?.name.toLowerCase().replace(" ", "-") : "/portfolio"
   const charAnim = useRef();
   useEffect(() => {
     animationCharCome(charAnim.current);

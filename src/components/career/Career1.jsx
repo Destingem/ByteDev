@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Career1 = ({data}) => {
-  console.log(data);
+  
   return (
     <>
       <section className="job__area pt-130 pb-150" id="job_list">

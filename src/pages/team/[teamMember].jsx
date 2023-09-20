@@ -4,7 +4,7 @@ import TeamDetails1 from "@/components/team/TeamDetails1";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 
 const TeamDetails = ({memberData}) => {
-  console.log(memberData)
+
   return (
     <div>
       <Head>
@@ -14,7 +14,7 @@ const TeamDetails = ({memberData}) => {
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3">
-          <TeamDetails1 {...memberData.attributes} />
+          <TeamDetails1 {...memberData?.attributes} />
           <DigitalAgencyCTA title={"Naše služby"} description={"Zaujali vás naše služby?"} button={"Kontaktujte nás"} />
         </RootLayout>
       </main>
@@ -32,9 +32,9 @@ export async function getStaticPaths() {
   });
   const members = await response.json();
 
-  const paths = members.data.map(member => {
-    const jmeno = member.attributes.jmeno;
-    const prijmeni = member.attributes.prijmeni;
+  const paths = members?.data.map(member => {
+    const jmeno = member?.attributes.jmeno;
+    const prijmeni = member?.attributes.prijmeni;
     let slug = "";
 
     if (jmeno.length <= 3) {
@@ -58,10 +58,10 @@ export async function getStaticProps({ params }) {
     }
   });
   const members = await response.json();
-console.log(members.data[0])
-  const memberData = members.data.find(member => {
-    const jmeno = member.attributes.jmeno;
-    const prijmeni = member.attributes.prijmeni;
+
+  const memberData = members?.data.find(member => {
+    const jmeno = member?.attributes.jmeno;
+    const prijmeni = member?.attributes.prijmeni;
     let slug = "";
 
     if (jmeno.length <= 3) {

@@ -75,7 +75,7 @@ const ourSites = [
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio1 = ({data}) => {
-  console.log(data);
+  
   const charAnim = useRef();
   const charAnim2 = useRef();
   const portfolioItemList = useRef();

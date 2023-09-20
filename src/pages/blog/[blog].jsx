@@ -6,7 +6,7 @@ import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 import { useEffect, useState } from "react";
 
 const BlogDetails = ({fetched2, allPosts}) => {
-  console.log(fetched2);
+  
  const [data, setData] = useState({
   "Heading": "Jak AI mění svět IT",
   "Kategorie": "Design",
@@ -57,7 +57,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(blog) {
   
-console.log( blog?.params?.blog);
+
   let fetched = await fetch("http://38.242.151.80:1666/api/blog-posts/" + blog?.params?.blog + "?populate=deep", {
       headers: {
           Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,

@@ -9,38 +9,32 @@ const CareerBenefit = () => {
             <div className="col-xxl-7 col-xl-7 col-lg-7">
               <ul className="career__benefits-list">
                 <li>
-                  Vacation & Paid <br />
-                  Time Off
+                  Flexibilita v práci
                 </li>
                 <li>
-                  Work-life <br /> Integration
+                  Vzdělávání v oboru
                 </li>
                 <li>
-                  Maternity/Paternity <br />
-                  Benefits
+                  Různorodost práce
                 </li>
                 <li>
-                  Personal <br /> Career Growth
+                  Nadstandardní ohodnocení
                 </li>
                 <li>
-                  Learning & <br />
-                  Development
+                  Svoboda rozhodování
                 </li>
                 <li>
-                  Healthy <br /> Food & Snacks
+                  Finanční ohodnocení na základě výsledků
                 </li>
               </ul>
             </div>
             <div className="col-xxl-5 col-xl-5 col-lg-5">
               <div className="sec-title-wrapper">
                 <h2 className="sec-title title-anim">
-                  Global Perks & Benefits
+                  Naše Výhody a Benefity
                 </h2>
                 <p>
-                  We want you to love working here as much as we do. To inspire
-                  our team to be creative, productive, and most importantly –
-                  feel valued as employees, we offer endless perks and
-                  de-stressors. How fun it is to unwind while at work!
+                  Chceme, abyste se u nás cítili skvěle a měli možnost naplno rozvíjet svůj potenciál. Proto vám nabízíme řadu benefitů a výhod, které vás budou motivovat k dosahování výjimečných výsledků.
                 </p>
               </div>
             </div>

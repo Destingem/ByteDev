@@ -3,17 +3,17 @@ import RootLayout from "@/components/common/layout/RootLayout";
 import PortfolioDetails1 from "@/components/portfolio/PortfolioDetails1";
 
 const PortfolioDetails = ({memberData, allData}) => {
-  console.log(allData);
+
   return (
     <>
       <Head>
-        <title>{memberData.attributes.name}</title>
+        <title>{memberData?.attributes?.name}</title>
         <meta name="description" content="Portfolio Details Description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3">
-          <PortfolioDetails1 id={memberData.id} allData={allData} data={memberData.attributes} />
+          <PortfolioDetails1 id={memberData?.id} allData={allData} data={memberData?.attributes} />
         </RootLayout>
       </main>
     </>
@@ -29,10 +29,10 @@ export async function getStaticPaths() {
     }
   });
   const members = await response.json();
-console.log(members.data)
+
   const paths = members.data.map(member => {
-    let slug = member.attributes.name.toLowerCase().replace(" ", "-")
-console.log(slug);
+    let slug = member?.attributes?.name.toLowerCase().replace(" ", "-")
+
     return {
       params: { portfolioDetails: slug }
     };
@@ -50,7 +50,7 @@ export async function getStaticProps({ params }) {
   const members = await response.json();
 
   const memberData = members.data.find(member => {
-    let slug = member.attributes.name.toLowerCase().replace(" ", "-")
+    let slug = member?.attributes?.name.toLowerCase().replace(" ", "-")
     return slug === params.portfolioDetails;
   });
 

@@ -63,10 +63,10 @@ const AboutTeam = ({team}) => {
       });
       return () => tHero.revert();
     } catch (error) {
-      console.log(error);
+      
     }
   }
-  console.log(team)
+
   
   return (
     <>
@@ -104,7 +104,7 @@ const AboutTeam = ({team}) => {
     } else {
       slug = `${jmeno.toLowerCase()}-${prijmeni.toLowerCase()}`;
     }
-    console.log(member?.attributes?.preview432x550?.data?.attributes?.url)
+  
     return(
   <SwiperSlide key={index}>
     <div className="team__slide">

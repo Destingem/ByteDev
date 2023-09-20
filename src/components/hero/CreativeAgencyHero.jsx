@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "@/plugins";
@@ -50,15 +51,21 @@ const CreativeAgencyHero = () => {
           });
         }
 
-        let split_creative = new SplitText(creativeSection.current, {
-          type: "chars",
-        });
-        let split_solution = new SplitText(solutionSection.current, {
-          type: "chars",
-        });
-        let split_herocontent = new SplitText(heroContentSection.current, {
-          type: "chars words",
-        });
+        try {
+          var split_creative = new SplitText(creativeSection.current, {
+            type: "chars",
+          });
+          var split_solution = new SplitText(solutionSection.current, {
+            type: "chars",
+          });
+          var split_herocontent = new SplitText(heroContentSection.current, {
+            type: "chars words",
+          });
+        } catch (error) {
+          console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+          // You can add any additional fallback code here if necessary.
+        }
+       
 
         gsap.from(split_creative.chars, {
           duration: 1,

@@ -112,7 +112,7 @@ const DigitalAgencyTestimonial = ({
         });
       }
     } catch (err) {
-      console.log(err);
+      
     }
   }
   return (

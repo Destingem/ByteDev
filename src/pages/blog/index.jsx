@@ -4,7 +4,7 @@ import Blog1 from "@/components/blog/Blog1";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 
 const Blog = (props) => {
-  console.log(props.fetched2.data)
+
   let {data} = props?.fetched2
   return (
     <>

@@ -21,7 +21,7 @@ let testimonials = [
   }
 ]
 const AboutTestimonial = ({recenze}) => {
-  console.log(recenze)
+
   return (
     <>
       <section className="testimonial__area-2">

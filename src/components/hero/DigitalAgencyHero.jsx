@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "@/plugins";
@@ -17,12 +18,20 @@ const DigitalAgencyHero = () => {
           y: 50,
           opacity: 0,
         });
-        let split_hero__title = new SplitText(heroTitle.current, {
+      try{
+        var split_hero__title = new SplitText(heroTitle.current, {
           type: "chars",
         });
-        let split_hero__subtitle = new SplitText(heroSubTitle.current, {
+        var split_hero__subtitle = new SplitText(heroSubTitle.current, {
           type: "chars words",
         });
+      }  catch (error) {
+        console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+        var split_hero__title = ""
+        var split_hero__subtitle = ""
+        // You can add any additional fallback code here if necessary.
+      }
+      
 
         gsap.from(split_hero__title.chars, {
           duration: 1,

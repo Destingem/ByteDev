@@ -25,7 +25,7 @@ const CursorAnimation = ({ cursor1, cursor2 }) => {
               "-=0.4"
             );
           } catch (error) {
-            console.log(error);
+            
           }
         }
         document.addEventListener("mousemove", mousemoveHandler);

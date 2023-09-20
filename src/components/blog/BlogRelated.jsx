@@ -10,7 +10,7 @@ import Blog32 from "../../../public/assets/imgs/blog/3/2a.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogRelated = ({data, id}) => {
-  console.log(data);
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       let device_width = window.innerWidth;

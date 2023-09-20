@@ -106,8 +106,8 @@ export default function Footer3() {
                         </a>
                       </li>
                       <li>
-                        <a href="mailto:info@buildyexample.com">
-                          info@ondrejzaplatilek.cz
+                        <a href="mailto:info@bytedev.cz">
+                        info@bytedev.cz
                         </a>
                       </li>
                     </ul>

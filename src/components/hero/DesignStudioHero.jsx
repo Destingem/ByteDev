@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger, SplitText } from "@/plugins";
@@ -12,7 +13,14 @@ const DesignStudioHero = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       let tHero = gsap.context(() => {
-        let heading_title = new SplitText(".sec-title-3", { type: "chars" });
+     try{
+      var heading_title = new SplitText(".sec-title-3", { type: "chars" });
+     }  catch (error) {
+      console.warn("Failed to split text using GSAP's SplitText. Displaying text normally.", error);
+      var heading_title = ""
+      // You can add any additional fallback code here if necessary.
+    }
+    
         let heading_char = heading_title.chars;
 
         gsap.from(heading_char, {

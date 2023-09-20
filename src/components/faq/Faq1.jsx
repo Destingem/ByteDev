@@ -49,7 +49,7 @@ const FAQ = [
   },
   {
     question: "Jak se mohu s vámi spojit?",
-    answer: "Můžete nás kontaktovat na telefonním čísle +420 608 270 754 nebo napsat na info@ondrejzaplatilek.cz."
+    answer: "Můžete nás kontaktovat na telefonním čísle +420 608 270 754 nebo napsat na info@bytedev.cz."
   },
   {
     question: "Kdo jsou vaši hlavní klienti?",

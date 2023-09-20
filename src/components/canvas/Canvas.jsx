@@ -207,10 +207,10 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
               <h3>Kontaktujte nás</h3>
               <ul>
                 <li>
-                  <a href="tel:02094980547">+420 608 270 754</a>
+                  <a href="tel:608270754">+420 608 270 754</a>
                 </li>
                 <li>
-                  <a href="mailto:info@extradesign.com">info@ondrejzaplatilek.cz</a>
+                  <a href="mailto:info@bytedev.cz">info@bytedev.cz</a>
                 </li>
                 <li>Moravské Bránice 119, <br /> 664 64 Dolní Kounice</li>
               </ul>

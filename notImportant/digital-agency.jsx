@@ -71,7 +71,7 @@ const DigitalAgency = () => {
         return () => tHero.revert();
       });
     } catch (err) {
-      console.log(err);
+      
     }
   }
   return (
@@ -85,7 +85,7 @@ const DigitalAgency = () => {
         <div className="cursor" id="client_cursor">
           Play
         </div>
-        <RootLayout header="header3" footer="footer3" defaultMode="dark">
+        <RootLayout header="header3" footer="footer3">
           <DigitalAgencyHero />
           <DigitalAgencyRoll />
           <DigitalAgencyAbout />

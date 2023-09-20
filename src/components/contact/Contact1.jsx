@@ -1,5 +1,6 @@
 import animationCharCome from "@/lib/utils/animationCharCome";
 import animationWordCome from "@/lib/utils/animationWordCome";
+import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
 const Contact1 = () => {
@@ -9,6 +10,12 @@ const Contact1 = () => {
     animationCharCome(charAnim.current);
     animationWordCome(wordAnim.current);
   }, []);
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
+  const subjectRef = useRef();
+  const messageRef = useRef();
+  const router = useRouter();
   return (
     <>
       <section className="contact__area-6">
@@ -40,18 +47,19 @@ const Contact1 = () => {
                   ref={wordAnim}
                 >
                   {"Ozvěte se nám"}
-                 
                 </h3>
                 <ul>
                   <li>
                     <a href="tel:+(2)578365379">+420 608 270 754</a>
                   </li>
                   <li>
-                    <a href="mailto:hello@example.com">info@ondrejzaplatilek.cz</a>
+                    <a href="mailto:hello@example.com">
+                    info@bytedev.cz
+                    </a>
                   </li>
                   <li>
                     <span>
-                    Moravské Bránice 119, <br /> 664 64 Dolní Kounice
+                      Moravské Bránice 119, <br /> 664 64 Dolní Kounice
                     </span>
                   </li>
                 </ul>
@@ -59,24 +67,49 @@ const Contact1 = () => {
             </div>
             <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
               <div className="contact__form">
-                <form action="assets/mail.php" method="POST">
+                <form
+                  onSubmit={(params) => {
+                    params.preventDefault();
+                    const mailtoLink = `mailto:ondrejz@bytedev.cz?subject=${encodeURIComponent(subjectRef.current.value)}&body=${encodeURIComponent(
+      `Name: ${nameRef.current.value}\nEmail: ${emailRef.current.value}\nPhone: ${phoneRef.current.value}\n\nMessage: ${messageRef.current.value}`
+    )}`;
+    router.push(mailtoLink);
+                  }}
+                  method="POST"
+                >
                   <div className="row g-3">
                     <div className="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="name" placeholder="Jméno *" />
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Jméno *"
+                        ref={nameRef}
+                      />
                     </div>
                     <div className="col-xxl-6 col-xl-6 col-12">
-                      <input type="email" name="email" placeholder="Email *" />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email *"
+                        ref={emailRef}
+                      />
                     </div>
                   </div>
                   <div className="row g-3">
                     <div className="col-xxl-6 col-xl-6 col-12">
-                      <input type="tel" name="phone" placeholder="Telefon" />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Telefon"
+                        ref={phoneRef}
+                      />
                     </div>
                     <div className="col-xxl-6 col-xl-6 col-12">
                       <input
                         type="text"
                         name="subject"
                         placeholder="Predmět *"
+                        ref={subjectRef}
                       />
                     </div>
                   </div>
@@ -85,6 +118,7 @@ const Contact1 = () => {
                       <textarea
                         name="message"
                         placeholder="Zpráva *"
+                        ref={messageRef}
                       ></textarea>
                     </div>
                   </div>

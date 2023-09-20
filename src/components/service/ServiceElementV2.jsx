@@ -20,7 +20,7 @@ const ServiceElementV2 = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       let listItem = serviceList.current.children;
-      console.log(listItem);
+      
       for (let i = 0; i < listItem.length; i++) {
         listItem[i].addEventListener("mousemove", function (e) {
           var service_id = this.getAttribute("data-service");

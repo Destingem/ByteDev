@@ -11,7 +11,7 @@ import DigitalMarketingPrice from "@/components/price/DigitalMarketingPrice";
 import DigitalMarketingBlog from "@/components/blog/DigitalMarketingBlog";
 
 export default function DigitalMarketing({recenze2, portfolio2, blog2}) {
-  console.log(portfolio2);
+ 
   return (
 
     <div>
@@ -73,7 +73,7 @@ let blog = await fetch("http://38.242.151.80:1666/api/blog-posts?populate=deep",
     })
     let portfolio2 = await portfolio.json()
     portfolio2.data.sort((a, b) => new Date(b. attributes.year) - new Date(a.attributes.year))
-  console.log(portfolio2);
+
       return ({
       props: {
         recenze2,

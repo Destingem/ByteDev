@@ -38,7 +38,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const DigitalMarketingTestimonial = ({recenze}) => {
   const testimonialArea = useRef();
-console.log(recenze);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       let tHero = gsap.context(() => {
@@ -100,7 +100,7 @@ console.log(recenze);
               });
             }
           } catch (err) {
-            console.log(err);
+            
           }
         }
         imageMoving(testimonialArea.current, ".testimonial__area-3 img");

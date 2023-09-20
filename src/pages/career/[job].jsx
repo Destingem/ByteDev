@@ -5,11 +5,11 @@ import RootLayout from "@/components/common/layout/RootLayout";
 import JobDetails1 from "@/components/job/JobDetails1";
 
 const JobDetails = ({a}) => {
-  console.log(a.attributes);
+
   return (
     <div>
       <Head>
-        <title>{a.attributes.name}</title>
+        <title>{a?.attributes?.name}</title>
         <meta name="description" content="Job Details Description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -19,14 +19,14 @@ const JobDetails = ({a}) => {
             <Image
               priority
               style={{ width: "auto", height: "auto" }}
-              src={a.attributes.main1820x700?.data?.attributes?.url ? "http://38.242.151.80:1666" + a.attributes.main1820x700?.data?.attributes?.url : Career6}
+              src={a?.attributes?.main1820x700?.data?.attributes?.url ? "http://38.242.151.80:1666" + a.attributes.main1820x700?.data?.attributes?.url : Career6}
               alt="Image"
               data-speed="auto"
               width={1820}
               height={700}
             />
           </section>
-          <JobDetails1 data={a.attributes} />
+          <JobDetails1 data={a?.attributes} />
         </RootLayout>
       </main>
     </div>
@@ -42,10 +42,10 @@ export async function getStaticPaths() {
     }
   });
   const members = await response.json();
-console.log(members.data)
+
   const paths = members.data.map(member => {
-    let slug = member.attributes.name.toLowerCase().replace(" ", "-")
-console.log(slug);
+    let slug = member?.attributes?.name?.toLowerCase().replace(" ", "-")
+
     return {
       params: { job: slug }
     };
@@ -63,7 +63,7 @@ export async function getStaticProps({ params }) {
   const members = await response.json();
 
   const memberData = members.data.find(member => {
-    let slug = member.attributes.name.toLowerCase().replace(" ", "-")
+    let slug = member?.attributes?.name?.toLowerCase().replace(" ", "-")
     return slug === params.job;
   });
 

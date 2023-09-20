@@ -6,7 +6,7 @@ import CareerHero from "@/components/hero/CareerHero";
 import Head from "next/head";
 
 const Career = ({fetched2}) => {
-  console.log(fetched2);
+  
   return (
     <div>
       <Head>
