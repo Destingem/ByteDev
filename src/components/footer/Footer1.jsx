@@ -64,7 +64,7 @@ export default function Footer1() {
         var mySplitText = ""
 
       }
-        let chars = mySplitText.chars;
+        let chars = mySplitText?.chars || [];
         let endGradient = chroma.scale([
           "#F9D371",
           "#F47340",
