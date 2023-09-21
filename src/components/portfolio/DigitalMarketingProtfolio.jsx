@@ -30,7 +30,7 @@ const transformPortfolioData = (dataArray) => {
       name: (
           <>
               <h3 className="portfolio__title-3" style={{ fontSize: "2rem" }}>{data.attributes.name}</h3>
-              <span>{data.attributes.type} {data.attributes.year}</span>
+              <span style={{fontSize: "5rem", position: "absolute", zIndex: "1000", top: "20%", left: "00%", maxWidth: "50%"}}>{data.attributes.type} {data.attributes.year}</span>
           </>
       ),
       image: data.attributes.preview770x938.data ? data.attributes.preview770x938.data.attributes.url : null

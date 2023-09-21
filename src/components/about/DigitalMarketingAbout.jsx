@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "@/plugins";
 import Link from "next/link.js";
-import About31 from "../../../public/assets/imgs/about/3/1.jpg";
+import About31 from "../../../public/assets/imgs/about/3/1a.png";
 import Image from "next/image.js";
 
 gsap.registerPlugin(ScrollSmoother);
@@ -61,7 +61,7 @@ const DigitalMarketingAbout = () => {
                       className="wc-btn-light btn-hover btn-item"
                       href="/about"
                     >
-                      <span></span> Více o mě{" "}
+                      <span></span> Více o nás{" "}
                       <i className="fa-solid fa-arrow-right"></i>
                     </Link>
                   </div>

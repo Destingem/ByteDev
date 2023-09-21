@@ -49,6 +49,12 @@ const Contact1 = () => {
                   {"Ozvěte se nám"}
                 </h3>
                 <ul>
+                <li>
+                    <span><strong>Ondřej Zaplatílek</strong></span>
+                </li>
+                <li>
+                  <span>IČ: 17538408</span>
+                </li>
                   <li>
                     <a href="tel:+(2)578365379">+420 608 270 754</a>
                   </li>
