@@ -44,6 +44,13 @@
     @media #{$sm} {
       grid-template-columns: repeat(2, 1fr);
       margin-left: 0;
+      display: grid !important;
+      max-width: 100%;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--white-3);
+      position: relative;
+      z-index: 1;
+      margin-left: 1px;
     }
 
     &-2 {
@@ -91,7 +98,7 @@
     @media #{$sm} {
       padding: 30px 0;
       border-left: 1px solid var(--white-3);
-
+      
       &:nth-child(even) {
         border-left: none;
       }
@@ -106,6 +113,9 @@
 
       @media #{$sm} {
         padding-bottom: 20px;
+      img{
+        max-width: 100%;
+      }
       }
     }
   }

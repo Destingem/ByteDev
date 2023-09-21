@@ -151,7 +151,7 @@ export default function Footer1() {
             <div className="footer__social-3">
               <ul>
                 <li>
-                  <a href="https://www.linkedin.com/in/ond%C5%99ej-zaplat%C3%ADlek-7aa2b31bb/">
+                  <a href="https://www.linkedin.com/company/bytedevcz">
                     LinkedIn
                   </a>
                 </li>
@@ -159,12 +159,12 @@ export default function Footer1() {
                   <a href="https://github.com/Destingem">Github</a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/ondrejzaplatilek">
+                  <a href="https://www.instagram.com/bytedevcz">
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/ondrej.zaplatilek/">
+                  <a href="https://www.facebook.com/bytedev.cz/">
                     Facebook
                   </a>
                 </li>

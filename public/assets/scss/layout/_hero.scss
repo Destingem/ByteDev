@@ -116,7 +116,7 @@
         }
 
         &-wrapper {
-          display: flex;
+          display: flex !important;
           justify-content: space-between;
 
           @media #{$sm} {
@@ -297,7 +297,7 @@
         width: 100%;
         height: 100%;
         z-index: 999;
-
+        
         @media #{$md} {
           display: none;
         }
@@ -560,7 +560,12 @@
 
     &-3 {
       position: relative;
-
+      display: flex;
+      flex-direction: column;
+     
+      @media #{$sm} {
+        gap: 20vh;
+      }
       .scroll-down {
         margin-top: 100px;
 

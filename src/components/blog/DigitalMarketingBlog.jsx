@@ -72,12 +72,12 @@ const DigitalMarketingBlog = ({ blogs }) => {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row" >
             {blogs.slice(0, 2).map((blog) => {
             
               return(
-              <div key={blog.id} className="col-xxl-6 col-xl-6 col-lg-6">
-                <article className="blog__item-3">
+              <div key={blog.id} style={{display: "flex", flexDirection: "column"}} className="col-xxl-6 col-xl-6 col-lg-6">
+                <article className="blog__item-3" style={{display: "flex", flexDirection: "column", minWidth: "fit-content", minHeight: "25vh"}}>
                   <div className="blog__img-wrapper-3">
                     <Link href={"/blog/" + blog.id}>
                       <div className="img-box">

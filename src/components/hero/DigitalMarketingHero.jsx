@@ -33,7 +33,7 @@ const DigitalMarketingHero = () => {
       var split_solutions = ""
       var split_text_animation = ""
       // You can add any additional fallback code here if necessary.
-    }
+    } 
     
       let tHero = gsap.context(() => {
         let HomeDigital = gsap.timeline();

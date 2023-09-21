@@ -147,13 +147,13 @@ const DigitalMarketingWorkflow = () => {
                   </div>
                   <ul className="research__tools">
                     <li>
-                      <a href="https://www.linkedin.com/in/ond%C5%99ej-zaplat%C3%ADlek-7aa2b31bb/">LinkedIn</a>
+                      <a href="https://www.linkedin.com/company/bytedevcz">LinkedIn</a>
                     </li>
                     <li>
                       <a href="https://github.com/Destingem/">Github</a>
                     </li>
                     <li>
-                      <a href="#">Instagram</a>
+                      <a href="https://www.instagram.com/bytedevcz">Instagram</a>
                     </li>
                   </ul>
                 </div>

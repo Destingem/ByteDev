@@ -44,7 +44,7 @@ export default function Footer3() {
                     </p>
                     <ul className="footer__social">
                       <li>
-                        <a href="https://www.linkedin.com/in/ond%C5%99ej-zaplat%C3%ADlek-7aa2b31bb/">
+                        <a href="https://www.linkedin.com/company/bytedevcz">
                           <span>
                             <i className="fa-brands fa-linkedin"></i>
                           </span>
@@ -59,14 +59,14 @@ export default function Footer3() {
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/ondrejzaplatilek">
+                        <a href="https://www.instagram.com/bytedevcz">
                           <span>
                             <i className="fa-brands fa-instagram"></i>
                           </span>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.facebook.com/ondrej.zaplatilek/">
+                        <a href="https://www.facebook.com/bytedev.cz/">
                           <span>
                             <i className="fa-brands fa-facebook-f"></i>
                           </span>
