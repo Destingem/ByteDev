@@ -40,6 +40,6 @@ export async function getStaticProps() {
       props: {
         fetched2
       },
-      revalidate: 600,
+      revalidate: 60,
   })
 }

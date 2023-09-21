@@ -80,6 +80,6 @@ let blog = await fetch("http://38.242.151.80:1666/api/blog-posts?populate=deep",
         blog2,
         portfolio2
       },
-      revalidate: 600,
+      revalidate: 60,
   })
 }

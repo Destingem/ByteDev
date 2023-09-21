@@ -78,7 +78,7 @@ export async function getStaticProps(blog) {
         fetched2,
         allPosts
       },
-      revalidate: 600,
+      revalidate: 60,
   })
 }
 

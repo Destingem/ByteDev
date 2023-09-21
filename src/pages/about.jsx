@@ -57,6 +57,6 @@ export async function getStaticProps() {
         team2,
         recenze2
       },
-      revalidate: 600,
+      revalidate: 60,
   })
 }
