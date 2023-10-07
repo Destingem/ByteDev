@@ -118,6 +118,7 @@ const DigitalMarketingHero = () => {
             </div>
           </div>
         </div>
+ {/*
         <div className="wrapper" ref={wrapper}>
           <div className="video-info">
             <div className="video-intro">
@@ -150,6 +151,7 @@ const DigitalMarketingHero = () => {
             </div>
           </div>
         </div>
+ */ }
 
         <div className="hero3-img-ani">
           <Image
