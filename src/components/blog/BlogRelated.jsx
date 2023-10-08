@@ -53,7 +53,7 @@ const BlogRelated = ({data, id}) => {
       return () => tHero.revert();
     }
   }, []);
-
+// href={posto?.attributes?.Heading ? "/blog/" + posto?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') :"#"}
   return (
     <>
       <section className="blog__related blog__animation">
@@ -72,7 +72,7 @@ const BlogRelated = ({data, id}) => {
               <div key={article.id} className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <article className="blog__item">
                   <div className="blog__img-wrapper">
-                    <Link href={"/blog/" + article.id}>
+                    <Link href={article?.attributes?.Heading ? "/blog/" + article?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"}>
                       <div className="img-box">
                         <Image
                           priority
@@ -90,11 +90,11 @@ const BlogRelated = ({data, id}) => {
                     <Link href="/category">{article.attributes.Kategorie}</Link> . {new Date(article.attributes.createdAt).toLocaleDateString()}
                   </h4>
                   <h5>
-                    <Link href={"/blog/" + article.id} className="blog__title sub-title-anim">
+                    <Link href={article?.attributes?.Heading ? "/blog/" + article?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"} className="blog__title sub-title-anim">
                       {article.attributes.Heading}
                     </Link>
                   </h5>
-                  <Link href={"/blog/" + article.id} className="blog__btn">
+                  <Link href={article?.attributes?.Heading ? "/blog/" + article?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"} className="blog__btn">
                    Číst více{" "}
                     <span>
                       <i className="fa-solid fa-arrow-right"></i>

@@ -141,7 +141,7 @@ const DigitalMarketingWorkflow = () => {
                       Bezpečnost, Design, Funkcionalita, Optimalizace
                     </h3>
                     <p>
-                      Spolupracuji s experty na každý obor. O bezpečnost webů se starám společně se studenty a magistrem kybernetické bezpečnosti, již sám studuji.
+                      Spolupracujeme s experty na každý obor. O bezpečnost webů se starám společně se studenty a magistrem kybernetické bezpečnosti, již sám studuji.
                       
                     </p>
                   </div>

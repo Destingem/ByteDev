@@ -106,7 +106,7 @@ const BlogElementV2 = () => {
                     </Link>
                   </h5>
                   <Link href="/blog-details" className="blog__btn">
-                    Read More{" "}
+                    Číst dále{" "}
                     <span>
                       <i className="fa-solid fa-arrow-right"></i>
                     </span>
@@ -147,7 +147,7 @@ const BlogElementV2 = () => {
                     </Link>
                   </h5>
                   <Link href="/blog-details" className="blog__btn">
-                    Read More{" "}
+                    Číst dále{" "}
                     <span>
                       <i className="fa-solid fa-arrow-right"></i>
                     </span>
@@ -187,7 +187,7 @@ const BlogElementV2 = () => {
                     </Link>
                   </h5>
                   <Link href="/blog-details" className="blog__btn">
-                    Read More{" "}
+                    Číst dále{" "}
                     <span>
                       <i className="fa-solid fa-arrow-right"></i>
                     </span>
@@ -228,7 +228,7 @@ const BlogElementV2 = () => {
                     </Link>
                   </h5>
                   <Link href="/blog-details" className="blog__btn">
-                    Read More{" "}
+                    Číst dále{" "}
                     <span>
                       <i className="fa-solid fa-arrow-right"></i>
                     </span>

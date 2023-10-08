@@ -105,7 +105,7 @@ const ModernAgencyPortfolio = () => {
                 design front and back-end development.
               </p>
               <Link href="/about" className="blog__btn about_btn">
-                Read More{" "}
+                Číst dále{" "}
                 <span>
                   <i className="fa-solid fa-arrow-right"></i>
                 </span>

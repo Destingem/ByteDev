@@ -78,47 +78,48 @@ const DigitalMarketingService = () => {
   const services = [
     {
       title: "Zakázkový vývoj webů",
-      content: "Vytváříme webovou stránku v Next.js zcela na míru. Celý proces probíhá v těsné spolupráci se zákazníkem a odborníky, od designéra po SEO experta.",
+      content: "Specializujeme se na vývoj na míru postavených webových stránek, které nejen vypadají skvěle, ale jsou také optimalizovány pro vyhledávače. Naše řešení nabízejí design, prototypování, kód optimalizovaný pro rychlé načítání a skvělou uživatelskou zkušenost, hosting a komplexní SEO & marketingové služby.",
       items: ["Designové podklady", "Prototyp stránky", "Optimalizovaný kód", "Dedikovaný hosting přímo u nás", "SEO Optimalizace & Marketing"],
       link: "/service/web",
       backgroundImage: "assets/imgs/service/3/nextLogo.png",
     },
     {
       title: "Zakázkový vývoj React aplikací",
-      content: "Tvoříme aplikaci určenou především pro použití, při kterém záleží na rychlosti vývoje a nikoli na SEO. Klasickým příkladem může být administrace, nebo aplikace pro vnitřní použití.",
+      content: "Vytváříme aplikace v Reactu, které nabízejí rychlý vývoj a vysokou flexibilitu. Naše služby zahrnují prototypování, dedikovaný hosting a možnost snadného převodu na Next.js či Electron.",
       items: ["Rychlost vývoje", "Prototyp aplikace", "Dedikovaný hosting přímo u nás", "Jednoduchý převod na Next.js či Electron"],
       link: "/service/web",
       backgroundImage: "assets/imgs/service/3/reactLogo.png",
     },
     {
       title: "Tvorba Wordpress webů a template stránek",
-      content: "Tvoříme jednoduchou a dobře vypadající webovou stránku pro ty, kteří nepotřebují svůj unikátní design a funkcionality. Víme, že mnoho podniků preferuje přehlednou, rychlou a cenově dostupnou stránku oproti zakázkovému vývoji.",
+      content: "Naše služby v oblasti WordPress se zaměřují na rychlý vývoj webů, které jsou snadno upravitelné. Nabízíme nejlepší poměr cena / výkon pro vaše projekty.",
       items: ["Cena", "Upravitelnost svépomocí", "Rychlý vývoj", "Nejlepší poměr cena / výkon"],
       link: "/service/web",
       backgroundImage: "assets/imgs/service/3/wpLogo.png",
     },
     {
       title: "Zakázkový vývoj Electron aplikací",
-      content: "Vyvijíme electron aplikací pro všechny platformy. Vývoj probíhá v Next.js a Electronu. Výsledná aplikace je tedy webová aplikace, která je spustitelná na všech platformách. Vývoj je násobně rychlejší a levnější než vývoj nativních aplikací.",
+      content: "Specializujeme se na vývoj aplikací v Electronu, které poskytují rychlý vývoj s cenovými výhodami oproti nativním aplikacím. Naše řešení podporují všechny platformy a nabízejí možnost snadného převodu mezi technologiemi.",
       items: ["Rychlý vývoj", "Mnohem nižší cena oproti nativnímu vývoji", "Podpora všech platforem", "Jednoduchý převod na Next.js, React či React Native"],
       link: "/service/desktop",
       backgroundImage: "assets/imgs/service/3/electronLogo.png",
     },
     {
       title: "Tvorba eshopů",
-      content: "Tvoříme eshop na míru s ohledem na vaše potřeby a požadavky. Optimalizovaný pro rychlou odezvu, SEO a uživatelskou přívětivost.",
+      content: "Navrhujeme a vyvíjíme e-shopy, které nejen vypadají atraktivně, ale jsou také zabezpečeny a optimalizovány pro vyhledávače. Naše řešení zahrnují kompletní administraci, design a SEO optimalizaci pro maximalizaci vašich prodejů.",
       items: ["Designové podklady", "Optimalizovaný kód", "Bezpečnostní protokoly", "SEO Optimalizace & Marketing", "Kompletní administrace eshopu"],
       link: "/service/eshop",
       backgroundImage: "assets/imgs/service/3/eshops.png",
     },
     {
       title: "Zakázkový vývoj dalších řešení",
-      content: "Poskytujeme kompletní vývojové služby pro různé platformy a technologie dle vašich potřeb a specifikací.",
+      content: "Pro ty, kteří hledají specifická a individualizovaná řešení, nabízíme služby na míru, které zahrnují integraci s existujícími systémy, optimalizovaný kód a dlouhodobou podporu po vývoji.",
       items: ["Individualizovaný přístup", "Integrace s existujícími systémy", "Optimalizovaný kód", "Scalable řešení", "Podpora a údržba po vývoji"],
       link: "/service/custom",
       backgroundImage: "assets/imgs/service/3/zakazkoveReseni.png",
     },
   ];
+
   return (
     <>
       <section className="service__area-3 pb-150">
@@ -131,9 +132,11 @@ const DigitalMarketingService = () => {
                   Naše <br /> Služby
                 </h3>
                 <p>
-                  Avšak vždy se snažíme o co nejlepší poměr cena-výkon. Avšak
-                  nikdy nesmí být cena na úkor kvality. Proto se naše služby
-                  pohybují v střední až vyšší cenové relaci.
+                  Jsme přesvědčeni, že kvalita má svou cenu. Proto se snažíme
+                  poskytovat služby na nejvyšší úrovni. Nabízíme vám
+                  individuální přístup a vytvoření řešení na míru. 
+                  Naše služby se pohybují ve vyšší střední cenové relaci,
+                  protože veříme, že investice do vývoje se vám vrátí.
                 </p>
               </div>
             </div>

@@ -93,7 +93,7 @@ const Blog1 = ({ blogPosts }) => {
           <div key={index} className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
             <article className="blog__item">
               <div className="blog__img-wrapper">
-                <Link href={"/blog/" + posto.id}>
+                <Link href={posto?.attributes?.Heading ? "/blog/" + posto?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"}>
                   <div className="img-box">
                     <Image
                       priority
@@ -111,12 +111,12 @@ const Blog1 = ({ blogPosts }) => {
                 <Link href="/blog">{post.Kategorie}</Link> . {new Date(post.createdAt).toLocaleDateString()}
               </h4>
               <h5>
-                <Link href={"/blog/" + posto.id} className="blog__title">
+                <Link href={posto?.attributes?.Heading ? "/blog/" + posto?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"} className="blog__title">
                   {post.Heading}
                 </Link>
               </h5>
-              <Link href={"/blog/" + posto.id} className="blog__btn">
-                Read More{" "}
+              <Link href={posto?.attributes?.Heading ? "/blog/" + posto?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"} className="blog__btn">
+                Číst dále{" "}
                 <span>
                   <i className="fa-solid fa-arrow-right"></i>
                 </span>

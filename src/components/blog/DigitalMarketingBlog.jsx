@@ -7,7 +7,7 @@ import Blog32 from "../../../public/assets/imgs/blog/3/2a.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const DigitalMarketingBlog = ({ blogs }) => {
-  
+  console.log(blogs);
   useEffect(() => {
     if (typeof window !== "undefined") {
       let device_width = window.innerWidth;
@@ -73,19 +73,19 @@ const DigitalMarketingBlog = ({ blogs }) => {
           </div>
 
           <div className="row" >
-            {blogs.slice(0, 2).map((blog) => {
-            
+            {blogs.slice(0, 2).map((blog, index) => {
+            console.log(blog)
               return(
               <div key={blog.id} style={{display: "flex", flexDirection: "column"}} className="col-xxl-6 col-xl-6 col-lg-6">
                 <article className="blog__item-3" style={{display: "flex", flexDirection: "column", minWidth: "fit-content", minHeight: "25vh"}}>
                   <div className="blog__img-wrapper-3">
-                    <Link href={"/blog/" + blog.id}>
+                    <Link href={blog?.attributes?.Heading ? "/blog/" + blog?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"}>
                       <div className="img-box">
                         <Image
                           priority
                           style={{ width: "auto", height: "auto" }}
                           className="image-box__item"
-                          src={blog?.attributes?.preview390x450?.data ? "http://38.242.151.80:1666" + blog.attributes.preview390x450.data[0].attributes.url : Blog32}
+                          src={blog?.attributes?.preview390x450?.data?.attributes?.url ? "http://38.242.151.80:1666" + blog.attributes.preview390x450.data.attributes.url : Blog32}
                           alt="Blog Thumbnail"
                           width={390}
                           height={450}
@@ -98,11 +98,11 @@ const DigitalMarketingBlog = ({ blogs }) => {
                       <Link href="/blog">{blog.attributes.Kategorie}</Link> . {new Date(blog.attributes.createdAt).toLocaleDateString()}
                     </h4>
                     <h5>
-                      <Link href={"/blog/" + blog.id} className="blog__title-3">
+                      <Link href={blog?.attributes?.Heading ? "/blog/" + blog?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"} className="blog__title-3">
                         {blog.attributes.Heading}
                       </Link>
                     </h5>
-                    <Link href={"/blog/" + blog.id} className="blog__btn">
+                    <Link href={blog?.attributes?.Heading ? "/blog/" + blog?.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") :"#"} className="blog__btn">
                       Číst dále{" "}
                       <span>
                         <i className="fa-solid fa-arrow-right"></i>

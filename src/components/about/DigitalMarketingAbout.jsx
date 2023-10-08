@@ -45,14 +45,14 @@ const DigitalMarketingAbout = () => {
               <div className="sec-title-wrapper">
                 <h2 className="sec-sub-title title-anim">Kdo jsme</h2>
                 <h3 className="sec-title title-anim">
-                  Jsme tým vývojářů, designérů a konzulantů
+                Jsme kombinací talentovaných vývojářů, designérů a konzultantů. 
                 </h3>
               </div>
               <div className="sec-text-wrapper">
                 <div className="sec-text text-anim">
                   <p>
                     Tvoříme profesionální webové stránky a aplikace v Next.js,
-                    Wordpress a Electron. Jsme připraveni vám pomoci realizovat
+                    Wordpress a Electronu. Jsme připraveni vám pomoci realizovat
                     vaše projekty a vytvořit moderní stránky a aplikace, které
                     přitahují pozornost vašich zákazníků.
                   </p>

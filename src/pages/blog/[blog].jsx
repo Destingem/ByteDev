@@ -5,8 +5,8 @@ import BlogRelated from "@/components/blog/BlogRelated";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 import { useEffect, useState } from "react";
 
-const BlogDetails = ({fetched2, allPosts}) => {
-  
+const BlogDetails = ({myBlog, allPosts}) => {
+  console.log(myBlog)
  const [data, setData] = useState({
   "Heading": "Jak AI mění svět IT",
   "Kategorie": "Design",
@@ -18,8 +18,8 @@ const BlogDetails = ({fetched2, allPosts}) => {
   "text": "Umělá inteligence (AI) je jedním z největších průlomů v oblasti IT. Od automatizace rutinních úloh po komplexní analýzy dat, AI mění způsob, jakým podniky a jednotlivci pracují s technologiemi. V tomto článku se podíváme na několik hlavních oblastí, kde AI vytváří významné změny.\n"
 })
 useEffect(()=> {
-  setData(fetched2.data.attributes)
-}, [fetched2])
+  setData(myBlog.attributes)
+}, [myBlog])
 
   return (
     <>
@@ -31,7 +31,7 @@ useEffect(()=> {
       <main>
         <RootLayout header="header3" footer="footer3">
           <BlogDetails1 {...data}/>
-          <BlogRelated {...allPosts} id={fetched2.data.id} />
+          <BlogRelated {...allPosts} id={myBlog?.id} />
           <DigitalAgencyCTA title={"Naše služby"} description={"Chcete se dozvědět více o našich službách?"} button={"Co nabízíme"} />
         </RootLayout>
       </main>
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
   });
 
   const posts = await response.json();
-  const paths = posts.data.map(post => "/blog/" + post.id.toString());
+  const paths = posts.data.map(post => "/blog/" + post.attributes?.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", ""));
 
   return {
       paths,
@@ -58,13 +58,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(blog) {
   
 
-  let fetched = await fetch("http://38.242.151.80:1666/api/blog-posts/" + blog?.params?.blog + "?populate=deep", {
-      headers: {
-          Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
-      }
-      })
-      let fetched2 = await fetched.json()
-    
+
       var allPosts = await fetch("http://38.242.151.80:1666/api/blog-posts?populate=deep", {
         headers: {
             Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
@@ -73,9 +67,11 @@ export async function getStaticProps(blog) {
         allPosts = await allPosts.json()
         allPosts.data.sort((a, b) => new Date(b. attributes.createdAt) - new Date(a.attributes.createdAt))
   
+        let myBlog = allPosts.data.filter((post) => post.attributes.Heading.replace(" ", "").replace(/\s+/g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace("?", "") === blog.params.blog)
+        console.log(myBlog)
       return ({
       props: {
-        fetched2,
+        myBlog: myBlog[0],
         allPosts
       },
       revalidate: 60,

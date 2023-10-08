@@ -99,8 +99,7 @@ const DigitalMarketingHero = () => {
                 </div>
                 <div className="hero__text-3">
                   <p className="hero__text-animation" ref={heroTextAnim}>
-                    Tvoříme profesionální webové stránky a aplikace v Next.js,
-                    Wordpress a Electron. Jsme připraveni pomoci vám realizovat vaše projekty a vytvořit moderní stránky a aplikace, které přitahují pozornost vašich zákazníků.
+                  Specializujeme se na webové stránky a aplikace v Next.js, Wordpress a Electron. Posuneme vaše projekty na další úroveň s atraktivními a efektivními řešeními pro vaše zákazníky.
 
                   </p>
                 </div>
