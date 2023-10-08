@@ -9,10 +9,18 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
 function App({ Component, pageProps }) {
-
   
+  useEffect(()=> {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-Y3K2LH6ZPV');
+  })
 
-  return(<> <GoogleAnalytics trackPageViews gaMeasurementId='G-TRFWGCFMHL' /> <Component {...pageProps} /></> );
+  return(<>
+
+   <GoogleAnalytics trackPageViews gaMeasurementId='G-TRFWGCFMHL' /> <Component {...pageProps} /></> );
 }
 
 export default App;
