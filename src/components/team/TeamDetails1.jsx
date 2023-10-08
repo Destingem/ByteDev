@@ -3,6 +3,7 @@ import TeamDetails from "../../../public/assets/imgs/team/detail.jpg";
 import Placeholder from "../../../public/assets/imgs/team/placeholder.jpg";
 import Image from "next/image.js";
 import animationCharCome from "@/lib/utils/animationCharCome";
+import parseMarkdown from "@/hooks/markdownHtml";
 
 const TeamDetails1 = ({ jmeno,
   prijmeni,
@@ -28,6 +29,7 @@ const TeamDetails1 = ({ jmeno,
  let photoData = photo765x1000?.data
   let projectData = projects?.data
   let portfolioLinks = portfolio ? Object.entries(portfolio)?.map(([name, href]) => ({ name, href })) : []
+  const { metadata, htmlContent } = parseMarkdown(desc);
   return (
     <>
       <section className="team__detail">
@@ -65,9 +67,9 @@ const TeamDetails1 = ({ jmeno,
                 >
                 {pozice}
                 </h3>
-                <p>
-                  {desc}
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: htmlContent }}>
+                  
+                </div>
                 
               </div>
               <div className="team__member-work">
