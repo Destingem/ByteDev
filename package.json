@@ -22,6 +22,7 @@
     "jquery": "^3.6.4",
     "markdown-it": "^13.0.1",
     "next": "13.2.4",
+    "nextjs-google-analytics": "^2.3.3",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
