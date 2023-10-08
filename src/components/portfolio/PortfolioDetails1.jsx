@@ -10,6 +10,7 @@ import DetailShape from "../../../public/assets/imgs/portfolio/detail/shape.png"
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import animationCharCome from "@/lib/utils/animationCharCome";
+import parseMarkdown from "@/hooks/markdownHtml";
 
 const PortfolioDetails1 = (a) => {
  
