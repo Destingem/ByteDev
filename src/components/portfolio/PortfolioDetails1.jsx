@@ -41,7 +41,7 @@ const {
   useEffect(() => {
     animationCharCome(charAnim.current);
   }, []);
- 
+
   return (
     <>
       <section className="portfolio__detail">
@@ -98,7 +98,7 @@ const {
 
             <div className="block-content">
            {Porfolio.map(item => {
-
+            const { metadata, htmlContent } = parseMarkdown(item.text ? item.text : "");
             return(
               <>
               <div className="row">
@@ -110,9 +110,9 @@ const {
 
                 <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                   <div className="portfolio__detail-text">
-                    <p>
-                      {item.text}
-                    </p>
+                    <div dangerouslySetInnerHTML={{ __html: htmlContent }}>
+                     
+                    </div>
                   </div>
                 </div>
               </div>
