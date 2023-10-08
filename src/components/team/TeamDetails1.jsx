@@ -29,7 +29,7 @@ const TeamDetails1 = ({ jmeno,
  let photoData = photo765x1000?.data
   let projectData = projects?.data
   let portfolioLinks = portfolio ? Object.entries(portfolio)?.map(([name, href]) => ({ name, href })) : []
-  const { metadata, htmlContent } = parseMarkdown(desc);
+  const { metadata, htmlContent } = parseMarkdown(desc ? desc : "");
   return (
     <>
       <section className="team__detail">
