@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Head from 'next/head';
+import Script from 'next/script';
 config.autoAddCss = false;
 
 function App({ Component, pageProps }) {
