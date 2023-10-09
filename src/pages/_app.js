@@ -28,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   return(<>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTWWNMW7"
 height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
-   <GoogleAnalytics trackPageViews gaMeasurementId='G-TRFWGCFMHL' /> 
+   <GoogleAnalytics trackPageViews gaMeasurementId='G-Y3K2LH6ZPV' /> 
    <Script src="https://www.googletagmanager.com/gtag/js?id=G-Y3K2LH6ZPV" />
       <Script id="google-analytics">
         {`
