@@ -1,7 +1,8 @@
 import animationCharCome from "@/lib/utils/animationCharCome";
 import animationWordCome from "@/lib/utils/animationWordCome";
+import { useViewportSize } from "@mantine/hooks";
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { use, useEffect, useRef } from "react";
 
 const Contact1 = () => {
   const charAnim = useRef();
@@ -16,6 +17,7 @@ const Contact1 = () => {
   const subjectRef = useRef();
   const messageRef = useRef();
   const router = useRouter();
+  const { height, width } = useViewportSize();
   return (
     <>
       <section className="contact__area-6">
@@ -73,76 +75,12 @@ const Contact1 = () => {
             </div>
             <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
               <div className="contact__form">
-                <form
-                  onSubmit={(params) => {
-                    params.preventDefault();
-                    const mailtoLink = `mailto:ondrejz@bytedev.cz?subject=${encodeURIComponent(subjectRef.current.value)}&body=${encodeURIComponent(
-      `Name: ${nameRef.current.value}\nEmail: ${emailRef.current.value}\nPhone: ${phoneRef.current.value}\n\nMessage: ${messageRef.current.value}`
-    )}`;
-    router.push(mailtoLink);
-                  }}
-                  method="POST"
-                >
-                  <div className="row g-3">
-                    <div className="col-xxl-6 col-xl-6 col-12">
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Jméno *"
-                        ref={nameRef}
-                      />
-                    </div>
-                    <div className="col-xxl-6 col-xl-6 col-12">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email *"
-                        ref={emailRef}
-                      />
-                    </div>
-                  </div>
-                  <div className="row g-3">
-                    <div className="col-xxl-6 col-xl-6 col-12">
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Telefon"
-                        ref={phoneRef}
-                      />
-                    </div>
-                    <div className="col-xxl-6 col-xl-6 col-12">
-                      <input
-                        type="text"
-                        name="subject"
-                        placeholder="Predmět *"
-                        ref={subjectRef}
-                      />
-                    </div>
-                  </div>
-                  <div className="row g-3">
-                    <div className="col-12">
-                      <textarea
-                        name="message"
-                        placeholder="Zpráva *"
-                        ref={messageRef}
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="row g-3">
-                    <div className="col-12">
-                      <div className="btn_wrapper">
-                        <button className="wc-btn-primary btn-hover btn-item">
-                          <span></span> Odeslat <br />
-                          zprávu<i className="fa-solid fa-arrow-right"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+             
               </div>
             </div>
           </div>
         </div>
+        <iframe src="https://forms.monday.com/forms/embed/44a39fe837b8ba9a678c536aa5ed4df4?r=euc1" width="100%" height={"100%"} style={{border: 0, boxShadow: "5px 5px 56px 0px rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", height: "fit-content", minHeight: "2200px", backgroundColor: "#fefeff"}}></iframe>
       </section>
     </>
   );

@@ -15,7 +15,7 @@ const DigitalAgencyCTA = ({title, description, button}) => {
                 </h2>
                 <div className="btn_wrapper">
                   <Link
-                    href="/contact"
+                    href="/service"
                     className="wc-btn-primary btn-hover btn-item"
                   >
                     <span></span>{button + " "}

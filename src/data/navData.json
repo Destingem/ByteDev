@@ -39,21 +39,8 @@
       "sub_nav": [
         {
           "name": "Webové stránky a aplikace",
-          "link": "/service/web",
-          "sub_dropdown_nav": [
-            {
-              "name": "Next.js",
-              "link": "/service-details"
-            },
-            {
-              "name": "React",
-              "link": "/service-detailst"
-            },
-            {
-              "name": "Wordpress",
-              "link": "/service-details"
-            }
-          ]
+          "link": "/service/web"
+         
         },
         {
           "name": "Vývoj desktop aplikací",

@@ -13,6 +13,7 @@ const Contact = () => {
       <main>
         <RootLayout header="header3" footer="footer3">
           <Contact1 />
+        
         </RootLayout>
       </main>
     </>
