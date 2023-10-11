@@ -82,6 +82,7 @@ const DigitalMarketingService = () => {
       items: ["Designové podklady", "Prototyp stránky", "Optimalizovaný kód", "Dedikovaný hosting přímo u nás", "SEO Optimalizace & Marketing"],
       link: "/service/web",
       backgroundImage: "assets/imgs/service/3/nextLogo.png",
+      price: "od 40 000 Kč"
     },
     {
       title: "Zakázkový vývoj React aplikací",
@@ -89,6 +90,7 @@ const DigitalMarketingService = () => {
       items: ["Rychlost vývoje", "Prototyp aplikace", "Dedikovaný hosting přímo u nás", "Jednoduchý převod na Next.js či Electron"],
       link: "/service/web",
       backgroundImage: "assets/imgs/service/3/reactLogo.png",
+      price: "od 12 000 Kč"
     },
     {
       title: "Tvorba Wordpress webů a template stránek",
@@ -96,6 +98,7 @@ const DigitalMarketingService = () => {
       items: ["Cena", "Upravitelnost svépomocí", "Rychlý vývoj", "Nejlepší poměr cena / výkon"],
       link: "/service/web",
       backgroundImage: "assets/imgs/service/3/wpLogo.png",
+      price: "od 20 000 Kč"
     },
     {
       title: "Zakázkový vývoj Electron aplikací",
@@ -103,6 +106,7 @@ const DigitalMarketingService = () => {
       items: ["Rychlý vývoj", "Mnohem nižší cena oproti nativnímu vývoji", "Podpora všech platforem", "Jednoduchý převod na Next.js, React či React Native"],
       link: "/service/desktop",
       backgroundImage: "assets/imgs/service/3/electronLogo.png",
+      price: "od 10 000 Kč"
     },
     {
       title: "Tvorba eshopů",
@@ -110,6 +114,7 @@ const DigitalMarketingService = () => {
       items: ["Designové podklady", "Optimalizovaný kód", "Bezpečnostní protokoly", "SEO Optimalizace & Marketing", "Kompletní administrace eshopu"],
       link: "/service/eshop",
       backgroundImage: "assets/imgs/service/3/eshops.png",
+      price: "od 40 000 Kč"
     },
     {
       title: "Zakázkový vývoj dalších řešení",
@@ -117,6 +122,7 @@ const DigitalMarketingService = () => {
       items: ["Individualizovaný přístup", "Integrace s existujícími systémy", "Optimalizovaný kód", "Scalable řešení", "Podpora a údržba po vývoji"],
       link: "/service/custom",
       backgroundImage: "assets/imgs/service/3/zakazkoveReseni.png",
+      price: "od 5 000 Kč"
     },
   ];
 
@@ -147,11 +153,14 @@ const DigitalMarketingService = () => {
               <div className="service__list-3" ref={serviceList}>
               {services.map((service, index) => (
                 <div key={index} className="service__item-3 service_animation">
-                  <h3>
+                 <div>
+                 <h3>
                     <Link href={service.link} className="service__title-3">
                       {service.title}
                     </Link>
                   </h3>
+                  <p style={{marginBottom: "2vh"}}>{service.price}</p>
+                 </div>
                   <div className="service__content-3">
                     <p>{service.content}</p>
                     <ul className="">

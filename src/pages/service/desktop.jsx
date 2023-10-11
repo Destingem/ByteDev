@@ -14,6 +14,7 @@ let development = {
   nadpis: "Desktopové aplikace a nativní vývoj",
   text1: "Desktopové aplikace zůstávají základním kamenem produktivity a efektivity v mnoha odvětvích. Nativní aplikace přinášejí optimální výkon a vysokou účinnost.",
   text2: "Naším cílem je vytvořit výkonné, intuitivní a stabilní desktopové aplikace, které naplní vaše obchodní a technologické potřeby.",
+  price: "od 10 000 Kč",
   body: [
     "Electron.js pro multiplatformní aplikace",
     "Optimalizace pro vysoký výkon a stabilitu",

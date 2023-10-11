@@ -4,7 +4,7 @@ import ThumbDev2 from "../../../public/assets/imgs/thumb/dev-2.jpg";
 import Image from "next/image";
 import animationCharCome from "@/lib/utils/animationCharCome";
 
-const ServiceDetailsDevelopment = ({nadpis, text1, text2, body, Img1, Img2}) => {
+const ServiceDetailsDevelopment = ({nadpis, text1, text2, body, Img1, Img2, price, price1 ,price2}) => {
   const charAnim = useRef();
   useEffect(() => {
     animationCharCome(charAnim.current);
@@ -20,6 +20,9 @@ const ServiceDetailsDevelopment = ({nadpis, text1, text2, body, Img1, Img2}) => 
                 <h2 className="sec-title animation__char_come" ref={charAnim}>
                  {nadpis}
                 </h2>
+                <p style={{marginTop: "2vh"}}>{price}</p>
+                <p style={{marginTop: "2vh"}}>{price1}</p>
+                <p style={{marginTop: "2vh"}}>{price2}</p>
               </div>
             </div>
             <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">

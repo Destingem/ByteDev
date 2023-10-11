@@ -12,6 +12,7 @@ import WebFAQ from "../../../public/assets/imgs/thumb/webFaq.png";
 import EshopDev from "../../../public/assets/imgs/thumb/eshopDev.png";
 let development = {
   nadpis: "E-shopy a prodejní platformy",
+  price: "od 40 000 Kč",
   text1: "V dnešní digitální době je eshop nezbytností pro úspěšný obchod. Ať už potřebujete e-shop na míru nebo prodejní platformy, jsme tu pro vás.",
   text2: "Naším cílem je vytvořit efektivní, elegantní a uživatelsky přívětivé řešení, které přiláká vaše zákazníky a usnadní správu vašeho byznysu.",
   body: [

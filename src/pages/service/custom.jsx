@@ -12,6 +12,7 @@ import WebFAQ from "../../../public/assets/imgs/thumb/webFaq.png";
 import Custom3D from "../../../public/assets/imgs/thumb/custom3D.png";
 let development = {
   nadpis: "Zakázkový vývoj řešení",
+  price: "od 5 000 Kč",
   text1: "Našer služby nejsou omezeny pouze na webové technologie a aplikace. Pokud potřebujete řešení na míru, jsme tu pro vás.",
   text2: "Rádi vám poskytneme optimální řešení pro vaše potřeby a cíle. Naším cílem je vytvořit efektivní, elegantní a uživatelsky přívětivé řešení, které přiláká vaše zákazníky a usnadní správu vašeho byznysu.",
   body: [

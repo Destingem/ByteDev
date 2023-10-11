@@ -11,6 +11,9 @@ import DesignFigma from "../../../public/assets/imgs/thumb/designFigma.png";
 import WebFAQ from "../../../public/assets/imgs/thumb/webFaq.png";
 let development = {
   nadpis: "Webové stránky a aplikace",
+  price: "Wordpress od 20 000 Kč",
+  price1: "React.js od 12 000 Kč",
+  price2: "Zakázkový vývoj od 40 000 Kč",
   text1: "V dnešní digitální době jsou webové stránky a aplikace nezbytností pro každý úspěšný podnik. Jsou to vaše digitální vizitky, které mohou dosáhnout celosvětového publiku.",
   text2: "Naším cílem je vytvořit funkční, elegantní a uživatelsky přívětivé webové stránky a aplikace, které budou zastupovat vaši značku a poslání v nejlepším světle.",
   body: [
