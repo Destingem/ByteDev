@@ -82,9 +82,10 @@ const DigitalMarketingProtfolio = ({portfolio}) => {
                          {site?.name}
                        
                         <Image
-                       height={600}
+                         width={2406}
+                            height={2931}
                           priority
-                          width={550}
+                         
                           style={{ height: "auto" }}
                           src={"http://38.242.151.80:1666" + site.image}
                           alt="Portfolio Image"

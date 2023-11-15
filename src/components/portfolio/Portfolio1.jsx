@@ -202,8 +202,8 @@ const Portfolio1 = ({data}) => {
                         <Link href={projectHref || "#"}> 
                           <Image
                             priority
-                            width={770}
-                            height={938}
+                            width={2406}
+                            height={2931}
                             style={{ height: "auto" }}
                             src={"http://38.242.151.80:1666"+project.attributes.preview770x938?.data?.attributes?.url || Detail1} // default image URL as fallback
                             alt="Portfolio Image"
