@@ -90,7 +90,7 @@ const {
             data-speed="auto"
             width={3840}
             height={1899}
-            unoptimized={true}
+           
           />
         </div>
 
@@ -126,7 +126,7 @@ const {
                 alt="Portfolio Image"
                 width={3840}
                 height={1899}
-                unoptimized={true}
+              
                
               /></>}
             </div>
