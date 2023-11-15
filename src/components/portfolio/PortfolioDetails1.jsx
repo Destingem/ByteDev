@@ -124,9 +124,9 @@ const {
                 style={{ width: "auto", height: "auto" }}
                 src={item.sectionImg1820x900?.data?.attributes?.url ? "http://38.242.151.80:1666" + item.sectionImg1820x900?.data?.attributes?.url : Detail2}
                 alt="Portfolio Image"
-                width={1820}
-                height={900}
-                data-speed="0.5"
+                width={3840}
+                height={1899}
+                unoptimized={true}
                
               /></>}
             </div>
