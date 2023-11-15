@@ -127,7 +127,7 @@ const {
                 width={1820}
                 height={900}
                 data-speed="0.5"
-                unoptimized={true}
+               
               /></>}
             </div>
               </>
