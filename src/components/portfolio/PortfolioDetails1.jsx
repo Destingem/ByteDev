@@ -90,6 +90,7 @@ const {
             data-speed="auto"
             width={1820}
             height={900}
+            quality={100}
           />
         </div>
 

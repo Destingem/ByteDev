@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import DigitalMarketingHero from "@/components/hero/DigitalMarketingHero";

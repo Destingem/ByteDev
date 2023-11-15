@@ -88,6 +88,7 @@ const DigitalMarketingProtfolio = ({portfolio}) => {
                           style={{ height: "auto" }}
                           src={"http://38.242.151.80:1666" + site.image}
                           alt="Portfolio Image"
+                          quality={100}
                         />
                       </Link>
                     </div>

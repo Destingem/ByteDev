@@ -7,7 +7,7 @@ const Preloader = () => {
       setTimeout(() => {
         const preloader = preloaderSection.current;
         preloader.style.display = "none";
-      }, 500);
+      }, 50);
     }
   }, []);
 
